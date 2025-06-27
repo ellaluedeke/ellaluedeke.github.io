@@ -23,11 +23,11 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Ella Luedeke"
   avatar           : "images/IMG_4042.jpeg"
-  bio              : ""
+  bio              : 
   location         : "Jacksonville, FL"
   employer         :
   pubmed           : 
-  googlescholar    : ""
+  googlescholar    : 
   email            : "ecluedeke@icloud.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
