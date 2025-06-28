@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "Ella Luedeke"
 excerpt: ""
 author_profile: true
 redirect_from: 
@@ -8,51 +8,51 @@ redirect_from:
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
 <span class='anchor' id='about-me'></span>
 
 I'm a computer science undergraduate at the University of North Florida with a passion for cybersecurity, machine learning, and computing for social good. I’m currently a research fellow at UNC Charlotte, studying cyber-physical attacks on power infrastructure. 
 
-I serve as the President of UNF's Women in Cybersecurity chapter, a Peer-Assisted Student Success Leader for Programming 1, and a Hicks Honors Colloquium Facilitator. I enjoy making an impact through leadership, mentoring, and research. 
+I serve as the President of UNF's Women in Cybersecurity chapter, a Peer-Assisted Student Success Leader for Programming 1, and a Hicks Honors Colloquium Facilitator. I am a student editor of the Florida Undergraduate Research Journal. I enjoy making an impact through leadership, mentoring, and research. 
+
+When I'm not doing research, I enjoy playing guitar, traveling, and spending time outdoors.
+# News
+- *June 2025*: &nbsp; Awarded the Haskell Company Endowed Scholarship.
+- *May 2025*: &nbsp; Began NSF REU at UNC Charlotte researching cyberattacks on Distributed Energy Resources. 
+- *April 2025*: &nbsp; Presented AI in education research at UNF SOARS and School of Computing Symposiums, winning Faculty and Staff Choice.
+- *April 2025*: &nbsp; Named recipient of UNF Distinguished Service Award and Hicks Honors Luminary Award for outreach work with the Women in Cybsecurity UNF chapter.
+
+# Honors and Awards
+- Haskell Company Endowed Scholarship (June 2025)
+- UNF School of Computing Distinguished Service Award (Apr 2025)  
+- Faculty & Staff Choice Award for Oral Presentation (Apr 2025)  
+- Hicks Honors Luminary Award (Apr 2025)  
+- Upsilon Pi Epsilon Honor Society for Computing (Apr 2025)  
+- Hicks Honors Fellowship Scholarship (Aug 2024)
+- Hicks Honors Merit Scholarship (Aug 2024)
+- Hicks Honors Study Abroad Scholarship (May 2024)
+-	Remarkable Futures Scholarship (Aug 2023)
+- UNF Presidential Diamond Award (Aug 2023) 
 
 
-# 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+# Education
+- **University of North Florida**, B.S. in Computer Science (Minor: Leadership)  
+  Hicks Honors College | Honors in the Major | GPA: 3.92  
+  *Expected Graduation: May 2026*  
+  *Study Abroad: American College of Greece (Summer 2024)*
 
-# 📝 Publications 
+# Presentations
+- *Apr 2025*: “ML for Misconceptions in Education” — SOARS Symposium, UNF  
+- *Apr 2025*: “AI in Education” — School of Computing Symposium, UNF (Award-Winning Talk)
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+# Leadership & Service
+- **President**, Women in Cybersecurity (UNF Chapter)  
+- **PASS Leader**, Programming I  
+- **Colloquium Facilitator**, Hicks Honors College  
+- **Student Editor**, Florida Undergraduate Research Journal  
+- **Datathon Mentor**, CodeForAWhile 2025
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+# Technical Skills
+**Languages:** Java, Python, C, C#, HTML/CSS  
+**ML & Tools:** Pandas, Scikit-learn, NLP, Matplotlib, Webflow, ArcGIS  
+**Strengths:** Research writing, public speaking, leadership, collaboration
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
-
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
-
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
-
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
