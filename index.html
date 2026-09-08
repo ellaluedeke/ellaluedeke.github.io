@@ -1,75 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ella Luedeke | Portfolio</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ella Luedeke</title>
+<meta name="description" content="Ella Luedeke — research on adversarial robustness, behavioral verification, and trustworthiness of LLM-based systems.">
+<style>
+  :root{
+    --bg:#fbfaf7;
+    --ink:#1e1c19;
+    --ink-soft:#4a463f;
+    --ink-faint:#83796a;
+    --rule:#ddd7c9;
+    --link:#6e2b23;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:17px;
+    line-height:1.65;
+  }
+  a{color:var(--link);}
+  a:hover{color:#932f22;}
+  .page{max-width:720px; margin:0 auto; padding:56px 24px 90px;}
+
+  .masthead{
+    display:flex; gap:22px; align-items:flex-start;
+    padding-bottom:28px; margin-bottom:34px; border-bottom:1px solid var(--rule);
+  }
+  .masthead img{
+    width:96px; height:120px; object-fit:cover;
+    border:1px solid var(--rule);
+  }
+  h1{font-size:28px; margin:0 0 2px; font-weight:normal;}
+  .role{font-size:15.5px; color:var(--ink-soft); font-style:italic; margin-bottom:10px;}
+  .contact{font-size:14.5px; color:var(--ink-soft);}
+  .contact a{margin-right:2px;}
+  .contact .sep{color:var(--ink-faint); margin:0 6px;}
+
+  .intro{margin-bottom:38px;}
+  .intro p{margin:0 0 14px;}
+  .intro p:last-child{margin-bottom:0;}
+
+  h2{
+    font-size:16px; font-weight:bold;
+    text-transform:uppercase; letter-spacing:.03em;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:6px; margin:0 0 16px;
+    color:var(--ink);
+  }
+  section{margin-bottom:38px;}
+
+  .entry{margin-bottom:16px;}
+  .entry:last-child{margin-bottom:0;}
+  .entry .line1{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  .entry .role-org{font-weight:bold;}
+  .entry .date{color:var(--ink-faint); font-size:15px; white-space:nowrap;}
+  .entry p{margin:4px 0 0; color:var(--ink-soft);}
+
+  ol.pubs{margin:0; padding-left:0; list-style:none; counter-reset:pub;}
+  ol.pubs li{
+    margin-bottom:14px; padding-left:28px; position:relative;
+  }
+  ol.pubs li::before{
+    counter-increment:pub; content:"[" counter(pub) "]";
+    position:absolute; left:0; color:var(--ink-faint); font-size:15px;
+  }
+  ol.pubs .status{font-size:13px; color:var(--ink-faint); font-style:italic;}
+  ol.pubs .venue{font-style:italic; color:var(--ink-soft);}
+
+  ul.plain{margin:0; padding-left:20px;}
+  ul.plain li{margin-bottom:6px;}
+
+  .honors p{margin:0; color:var(--ink-soft);}
+
+  footer{
+    margin-top:50px; padding-top:18px; border-top:1px solid var(--rule);
+    font-size:13.5px; color:var(--ink-faint);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+
+  @media (max-width:520px){
+    .masthead{flex-direction:column; align-items:flex-start;}
+    .masthead img{width:84px; height:104px;}
+  }
+</style>
 </head>
 <body>
-  <div id="page-wrapper">
+<div class="page">
 
-    <!-- Header -->
-    <div id="header-wrapper">
-      <header id="header">
-        <h1><a href="index.html">Ella Luedeke</a></h1>
-        <nav>
-          <a href="index.html" class="current-page-item">Home</a>
-          <a href="research.html">Research</a>
-          <a href="projects.html">Projects</a>
-          <a href="leadership.html">Leadership</a>
-          <a href="about.html">About Me</a>
-        </nav>
-      </header>
-    </div>
-
-    <!-- Banner -->
-    <div id="banner-wrapper">
-      <div id="banner">
-        <h2>Undergraduate Researcher</h2>
-        <span>Human-Computer Interaction | Cybersecurity | Artificial Intelligence</span>
+  <div class="masthead">
+    <img src="https://ellaluedeke.github.io/images/IMG_4042.jpeg" alt="Ella Luedeke">
+    <div>
+      <h1>Ella Luedeke</h1>
+      <div class="role">CS Senior, University of North Florida — incoming MPhil, University of Cambridge</div>
+      <div class="contact">
+        <a href="mailto:youremail@example.edu">Email</a><span class="sep">·</span><a href="assets/Luedeke_CV.pdf">CV</a><span class="sep">·</span><a href="https://www.linkedin.com/in/ella-luedeke-89941a290">LinkedIn</a><span class="sep">·</span>Jacksonville, FL
       </div>
     </div>
-
-    <!-- Main -->
-    <div id="main">
-
-      <section style="display: flex; align-items: center; flex-wrap: wrap; gap: 2rem;">
-        <img src="images/IMG_4042.jpeg" alt="Ella Luedeke headshot" style="width:180px; height:auto; border-radius:100px; border:1px solid #ccc;">
-        <div style="flex:1;">
-          <h2>Welcome</h2>
-          <p>
-            I’m Ella Luedeke, a computer science major at the University of North Florida, researching cybersecurity education and formal analysis of exploitability. 
-            My work bridges technical systems and human understanding, with the goal of making cybersecurity more approachable and transparent.
-          </p>
-          <a href="about.html" class="button">Learn More About Me</a>
-        </div>
-      </section>
-
-      <section>
-        <h2>Recent News</h2>
-        <ul class="big-image-list">
-          <li>
-            <img src="images/90b45ead-2ef9-4fef-9454-7ce005a3d897.png" alt="CISSE journal">
-            <div>
-              <h3>Accepted to the 29th CISSE Journal & Conference</h3>
-              <p>Developed an educational cybersecurity simulation for power grid systems through an NSF REU, teaching non-CS students about cyberattacks and resilience to be presented at the CISSE.</p>
-              <a href="https://cisse.info/e/29th/colloquium" class="button">Link to CISSE Abstract</a>
-              
-            </div>
-          </li>
-        </ul>
-      </section>
-
-    </div>
-
-    <!-- Footer -->
-    <div id="footer-wrapper">
-      <footer>
-        <p>© 2025 Ella Luedeke | Designed & Coded by Ella</p>
-      </footer>
-    </div>
-
   </div>
+
+  <div class="intro">
+    <p>I study adversarial robustness and behavioral verification in LLM-based systems — how a model's reasoning breaks down under pressure, and how to build trust guarantees that don't just stack another probabilistic layer on top of the original problem. My work spans adversarial perturbation of AI coding agents, agentic-system safeguards, and applied machine learning, grounded in cybersecurity and formal methods.</p>
+    <p>I'm a senior at the University of North Florida (CS major, Leadership minor, Hicks Honors College), currently a research intern at Sandia National Laboratories. This October I begin an MPhil in Advanced Computer Science at Cambridge (Churchill College), on my way to a PhD in AI security and trustworthy systems.</p>
+  </div>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="line1"><span class="role-org">Research Intern — Sandia National Laboratories</span><span class="date">2026</span></div>
+      <p>Working with Dr. Reed Milewicz on reasoning collapse in LLM coding agents: a four-condition study of how code complexity and adversarial perturbation degrade agent performance, using a three-class perturbation taxonomy against a Trilinos scientific-software testbed. Central finding: failure isn't gradual — error character shifts qualitatively as perturbation increases, and model confidence often doesn't drop even as correctness collapses.</p>
+    </div>
+
+    <div class="entry">
+      <div class="line1"><span class="role-org">Research Assistant — University of North Florida</span><span class="date">Jan 2025 – present</span></div>
+      <p>Built an LLM-based approach to detect physics-student misconceptions from writing, fine-tuning and evaluating against prompting baselines. Independently wrote and secured a grant proposal for an automated feedback-generation pipeline for data structures instruction.</p>
+    </div>
+
+    <div class="entry">
+      <div class="line1"><span class="role-org">NSF REU Fellow — UNC Charlotte</span><span class="date">May – Jul 2025</span></div>
+      <p>Researched cyber-physical attacks on power-grid infrastructure; designed and authored an accepted educational cybersecurity activity for a real-world grid simulation platform.</p>
+    </div>
+
+    <div class="entry">
+      <div class="line1"><span class="role-org">NSF REU Volunteer — UT Arlington</span><span class="date">Mar – May 2025</span></div>
+      <p>Investigated linguistic properties of animal vocalizations with AniVoice, an open-source platform for processing and transcribing animal sound into phonetic symbols.</p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <ol class="pubs">
+      <li><span class="status">Under review</span> — Luedeke, E. "Weird machines: a survey of unintended computation as an attack surface." <span class="venue">IEEE Transactions on Dependable and Secure Computing, 2026.</span></li>
+      <li><span class="status">Accepted</span> — Luedeke, E. "On the quality of AI-assisted research software." <span class="venue">US Research Software Engineer (US-RSE), position paper, 2026.</span></li>
+      <li><span class="status">Accepted</span> — Luedeke, E. "Teaching infrastructure security through interactive experiences." <span class="venue">The Colloquium™ (CISSE), 29th Journal &amp; Conference, 2025.</span></li>
+      <li><span class="status">Submitted</span> — Luedeke, E. "Exploring the feasibility of detecting physics-student misconceptions in writing with LLMs." <span class="venue">EACL, 2026.</span></li>
+    </ol>
+  </section>
+
+  <section id="talks">
+    <h2>Presentations</h2>
+    <ul class="plain">
+      <li>FLAIRS — LLM-based detection of physics-student misconceptions</li>
+      <li>NCUR — national presentation, same research area</li>
+      <li>UNF School of Computing Symposium — oral presentation (Faculty &amp; Staff Choice Award)</li>
+      <li>SOARS Symposium, UNF — oral presentation</li>
+      <li>OUR Summer Research Symposium, UNC Charlotte</li>
+    </ul>
+  </section>
+
+  <section id="honors" class="honors">
+    <h2>Honors</h2>
+    <p>NSF Research Fellow (×2) &nbsp;·&nbsp; OUR U-RSCA Grant &nbsp;·&nbsp; UNF Honors Fellowship &nbsp;·&nbsp; Hicks Honors College &nbsp;·&nbsp; 3.92 GPA &nbsp;·&nbsp; Faculty &amp; Staff Choice Award, UNF Computing Symposium</p>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p style="color:var(--ink-soft)">I'm President of UNF's Women in Cybersecurity (WiCyS) chapter and completed the TLI Leadership Capstone. Outside of research I'm a serious hiker — recent summits include Mt. Elbert, Wheeler Peak, and the La Luz and South Zapata trails — along with photography and travel. I studied abroad at the American College of Greece in Athens, and I'm already mapping out UK day hikes and term-break travel for Cambridge.</p>
+  </section>
+
+  <footer>
+    <span>© 2026 Ella Luedeke</span>
+    <span>Last updated August 2026</span>
+  </footer>
+
+</div>
 </body>
 </html>
