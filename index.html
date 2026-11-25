@@ -3,18 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ella Luedeke</title>
-  <meta name="description" content="Ella Luedeke, MPhil student at the University of Cambridge. Research on language models for software engineering and security.">
+  <title>Ella Luedeke | University of Cambridge</title>
+  <meta name="description" content="Ella Luedeke, MPhil student in Advanced Computer Science at Cambridge. Research on language models, software engineering, and security.">
   <style>
     :root {
       color-scheme: light;
-      --paper: #f8fafc;
-      --sidebar: #eaf0f7;
-      --ink: #18273b;
-      --body: #2b3b4f;
-      --muted: #465970;
-      --line: #c8d4e2;
-      --blue: #214f8d;
+      --paper: #fdfcf9;
+      --ink: #242925;
+      --muted: #535d56;
+      --accent: #275a4a;
+      --rule: #d5dad2;
       --serif: Georgia, "Times New Roman", serif;
       --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
     }
@@ -24,252 +22,212 @@
     body {
       margin: 0;
       background: var(--paper);
-      color: var(--body);
+      color: var(--ink);
       font: 1rem / 1.7 var(--sans);
     }
 
-    h1, h2, h3, p { margin: 0; }
-    h1, h2, h3 { color: var(--ink); }
-    p + p { margin-top: .7rem; }
-    a { color: var(--blue); text-decoration-thickness: .07em; text-underline-offset: .2em; }
-    a:hover { text-decoration-thickness: .14em; }
-    a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
-
     .page {
-      display: grid;
-      grid-template-columns: minmax(13.5rem, 15.5rem) minmax(0, 1fr);
-      max-width: 74rem;
-      margin: 0 auto;
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-      min-height: 100vh;
+      width: min(100% - 3rem, 50rem);
+      margin-inline: auto;
     }
 
-    .profile {
-      position: sticky;
-      top: 0;
-      align-self: start;
-      padding: clamp(2.25rem, 6vw, 4.75rem) 1.5rem 2rem 0;
-    }
+    h1, h2, h3, p, ul, figure { margin: 0; }
+    h1, h2, h3 { font-family: var(--serif); }
+    h1 { font-size: clamp(2.4rem, 6vw, 3.55rem); font-weight: 400; line-height: 1.05; letter-spacing: -.04em; }
+    h2 { font-size: 1.63rem; font-weight: 400; line-height: 1.25; margin-bottom: 1.15rem; }
+    h3 { font-size: 1.14rem; line-height: 1.35; font-weight: 700; }
+    p + p { margin-top: .8rem; }
+    a { color: var(--accent); text-decoration-color: #6d9588; text-underline-offset: .2em; }
+    a:hover { text-decoration-color: currentColor; text-decoration-thickness: .12em; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: .2rem; }
 
-    .profile::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 0 -100vmax;
-      min-height: 100vh;
-      border-right: 1px solid var(--line);
-      background: var(--sidebar);
-      z-index: -1;
-    }
+    header { padding-top: clamp(2rem, 6vw, 3.75rem); }
+    .affiliation { color: var(--muted); margin-top: .65rem; font-size: .9375rem; line-height: 1.5; }
 
-    .profile img {
-      display: block;
-      width: 7.5rem;
-      height: auto;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      margin-bottom: 1.25rem;
-      border-radius: .15rem;
+    nav {
+      border-top: 2px solid var(--accent);
+      border-bottom: 1px solid var(--rule);
+      margin-top: 1.35rem;
+      padding-block: .65rem;
     }
-
-    h1 { font: 400 clamp(2rem, 3.3vw, 2.75rem) / 1.04 var(--serif); }
-    .role { margin-top: .65rem; font-size: .95rem; line-height: 1.5; }
-    .affiliation, .detail { color: var(--muted); font-size: .875rem; line-height: 1.55; }
 
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: .35rem .9rem;
+      align-items: baseline;
+      gap: .35rem 1.25rem;
       list-style: none;
-      margin: .9rem 0 0;
       padding: 0;
-      font-size: .875rem;
+      font-size: .9375rem;
     }
 
-    .section-links {
-      display: grid;
-      justify-items: start;
-      gap: .45rem;
-      border-top: 1px solid var(--line);
-      margin-top: 1.5rem;
-      padding-top: 1.1rem;
+    .bio { display: flow-root; padding-block: 1.7rem 1.9rem; }
+    .bio .opening { font: 1.19rem / 1.55 var(--serif); }
+    .bio-links { margin-top: .85rem; }
+
+    .portrait {
+      float: right;
+      width: clamp(8rem, 22%, 10.5rem);
+      margin: .17rem 0 .6rem clamp(1.15rem, 5vw, 2.6rem);
+      padding: .3rem;
+      border: 1px solid var(--rule);
+      background: #fff;
     }
 
-    main { padding: clamp(2.5rem, 6vw, 4.75rem) 0 2.25rem clamp(2.25rem, 6vw, 5.5rem); min-width: 0; }
-
-    .intro {
-      max-width: 41rem;
-      margin-bottom: 2.65rem;
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
     }
 
-    .intro .lead {
-      color: var(--ink);
-      font: 400 clamp(1.55rem, 3.35vw, 2.25rem) / 1.28 var(--serif);
-      letter-spacing: -.015em;
-    }
-
-    .intro p + p { margin-top: 1rem; }
-
-    section {
-      margin-top: 2.5rem;
-      border-top: 1px solid var(--line);
-      padding-top: 1.25rem;
+    main section {
+      padding-block: 1.45rem 1.75rem;
+      border-top: 1px solid var(--rule);
       scroll-margin-top: 1rem;
     }
 
-    h2 { margin-bottom: 1.3rem; font: 400 1.6rem / 1.2 var(--serif); }
-    h3 { font-size: 1.125rem; line-height: 1.4; }
-
-    article + article {
-      margin-top: 1.4rem;
-      padding-top: 1.4rem;
-      border-top: 1px solid var(--line);
+    #experience article {
+      padding-left: .95rem;
+      border-left: 1px solid var(--rule);
     }
 
-    article .detail { margin: .2rem 0 .55rem; }
-    article .project-links { margin: .55rem 0 0; }
+    #experience article:first-of-type { border-left-color: var(--accent); }
+    article + article { margin-top: 1.4rem; }
+    .detail { color: var(--muted); font-size: .875rem; line-height: 1.55; }
+    article .detail { margin: .18rem 0 .42rem; }
+    article .project-links { margin: .4rem 0 0; }
 
-    .publications { list-style: none; padding: 0; margin: 0; }
-    .publications li { line-height: 1.55; scroll-margin-top: 1rem; }
-    .publications li + li { margin-top: 1.15rem; }
-    .publications .detail { margin-top: .2rem; }
-    footer { margin-top: 2.25rem; color: var(--muted); font-size: .8125rem; }
+    .publications, .talks { list-style: none; padding: 0; }
+    .publications li { scroll-margin-top: 1rem; }
+    .publications li + li, .talks li + li { margin-top: 1rem; }
+    .publications li > a { font: 1.075rem / 1.4 var(--serif); }
+    .publications .detail { margin-top: .25rem; }
+    .venue { display: block; }
 
-    @media (max-height: 34rem) {
-      .profile { position: relative; }
+    .talks li {
+      display: grid;
+      grid-template-columns: 3rem minmax(0, 1fr);
+      gap: .65rem;
     }
 
-    @media (max-width: 48rem) {
-      .page { display: block; padding: 0; }
+    .talks time { font-variant-numeric: tabular-nums; padding-top: .18rem; }
+    footer { border-top: 1px solid var(--rule); padding-block: .9rem 2.5rem; }
 
-      .profile {
-        position: static;
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 5.5rem;
-        gap: 0 1rem;
-        padding: 1.75rem clamp(1.15rem, 5vw, 2.5rem) 1.2rem;
-        border-bottom: 1px solid var(--line);
-        background: var(--sidebar);
-      }
+    @media (max-width: 36rem) {
+      .page { width: calc(100% - 2rem); }
+      .portrait { width: clamp(4.75rem, 24%, 7rem); margin-left: .9rem; }
+      .links { gap: .3rem .95rem; }
+      .bio { padding-block: 1.35rem 1.55rem; }
+      #experience article { padding-left: .7rem; }
+    }
 
-      .profile::before { content: none; }
-      .profile img { grid-column: 2; grid-row: 1; width: 100%; margin: 0; }
-      .identity { grid-column: 1; grid-row: 1; }
-      .profile nav { grid-column: 1 / -1; }
-
-      .section-links {
-        display: flex;
-        gap: .45rem 1rem;
-        margin-top: 1.15rem;
-        padding-top: .85rem;
-      }
-
-      main { padding: 1.7rem clamp(1.15rem, 5vw, 2.5rem) 2rem; }
-      .intro { margin-bottom: 2rem; }
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; }
+      header { padding-top: 0; }
+      article, .publications li, .talks li { break-inside: avoid; }
     }
   </style>
 </head>
 <body>
-<<<<<<< HEAD
   <div class="page">
-    <header class="profile">
-      <img src="images/ella_headshot.jpg" alt="Portrait of Ella Luedeke" width="132" height="165">
-      <div class="identity">
-        <h1>Ella Luedeke</h1>
-        <p class="role">MPhil student in Advanced Computer Science</p>
-        <p class="affiliation">University of Cambridge · Churchill College</p>
-        <ul class="links" aria-label="Contact and profiles">
-          <li><a href="mailto:el669@cam.ac.uk">Email</a></li>
-          <li><a href="https://github.com/ellaluedeke">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/ella-luedeke">LinkedIn</a></li>
-        </ul>
-=======
-<div class="page">
-
-  <div class="masthead">
-    <img src="https://ellaluedeke.github.io/images/ella_headshot.jpg" alt="Ella Luedeke">
-    <div>
+    <header>
       <h1>Ella Luedeke</h1>
-      <div class="role">MPhil Student, Churchill College - University of Cambridge</div>
-      <div class="contact">
-        <a href="mailto:el669@cam.ac.uk">Email</a><span class="sep">·</span><a href="assets/Luedeke_CV.pdf">CV</a><span class="sep">·</span><a href="https://www.linkedin.com/in/ella-luedeke">LinkedIn</a><span class="sep">·</span>Jacksonville, FL
->>>>>>> 5856c97f760518f1149c93526993e3939603d15c
-      </div>
+      <p class="affiliation">MPhil in Advanced Computer Science<br>University of Cambridge · Churchill College</p>
       <nav aria-label="On this page">
-        <ul class="links section-links">
+        <ul class="links">
           <li><a href="#experience">Research</a></li>
           <li><a href="#publications">Publications</a></li>
-          <li><a href="#talks">Presentations</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#talks">Talks</a></li>
+          <li><a href="#about">Teaching &amp; Service</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <div class="intro">
-        <p class="lead">I study how language models reason about code and how we can tell when they get it wrong.</p>
-        <p>My MPhil project looks at security patches. At Sandia, I studied how coding agents handle complex tasks and misleading inputs in existing codebases.</p>
+      <div class="bio">
+        <figure class="portrait">
+          <img src="images/ella_headshot.jpg" alt="Ella Luedeke" width="152" height="190">
+        </figure>
+        <div>
+          <p class="opening">I’m an MPhil student at Cambridge working with Rob Mullins. I study how language models reason about software and how to check their conclusions against what the program actually does.</p>
+          <p>Before Cambridge, I studied computer science at the University of North Florida and spent a summer at Sandia National Laboratories evaluating coding agents. My current work asks how to judge a fix when the tests cover only a few ways the bug can show up.</p>
+          <ul class="links bio-links" aria-label="Contact and profiles">
+            <li><a href="mailto:el669@cam.ac.uk">Email</a></li>
+            <li><a href="https://github.com/ellaluedeke">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/ella-luedeke">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
 
       <section id="experience" aria-labelledby="research-heading">
         <h2 id="research-heading">Research</h2>
+
         <article>
-          <h3>When does a security patch actually fix the bug?</h3>
-          <p class="detail">University of Cambridge · MPhil thesis in progress · Supervisor: Rob Mullins</p>
-          <p>A patch can pass the test that revealed a bug and still fail on a case that the test suite missed. My thesis explores how language models and formal methods can help distinguish a fix that generalizes from one that only works on the cases we already know about. I’m interested in what evidence we can use to judge a proposed fix, especially when tests leave part of the program’s behavior unchecked.</p>
+          <h3>Security patch verification</h3>
+          <p class="detail">University of Cambridge · MPhil thesis in progress</p>
+          <p>A patch can pass the test that exposed a bug and still leave the program vulnerable on a case the test missed. I’m exploring how language models and formal methods can help decide whether a fix holds beyond the examples we already know.</p>
         </article>
 
         <article>
-          <h3>Where do coding agents get stuck in an existing codebase?</h3>
-          <p class="detail">Sandia National Laboratories · Research internship with Reed Milewicz · Summer 2026</p>
-          <p>I built an evaluation pipeline to study coding agents on tasks involving existing software. I varied task complexity and the strength of misleading inputs under controlled conditions. I wanted to see which kinds of errors surfaced as the tasks got harder and whether the same kinds of errors appeared when the inputs were deliberately misleading.</p>
-          <p>I also coauthored a <a href="https://doi.org/10.5281/zenodo.22818568">US-RSE paper on research software quality</a> about the judgment researchers bring to assessing and maintaining AI-assisted code.</p>
+          <h3>Coding agents in existing software</h3>
+          <p class="detail">Sandia National Laboratories · Internship with Reed Milewicz, summer 2026</p>
+          <p>I built an evaluation pipeline that varied task complexity and the strength of misleading inputs. I wanted to know whether an agent makes the same kinds of mistakes when the code is harder to understand as when the information it receives points it in the wrong direction.</p>
+          <p>I also coauthored a <a href="https://doi.org/10.5281/zenodo.22818568">paper on research software quality</a> that looks at how researchers judge and maintain software they build with AI assistance.</p>
         </article>
 
         <article>
-          <h3>RAMP · Reading students’ explanations in physics</h3>
-          <p class="detail">University of North Florida · Undergraduate research with Indika Kahanda</p>
-          <p>A student can arrive at the right answer while holding a misconception that only shows up in their written explanation. I designed and evaluated prompts that asked language models to identify those misconceptions in short physics responses. We compared model outputs with instructor annotations and examined how much guidance the models needed to interpret the responses.</p>
+          <h3>RAMP · Detecting physics misconceptions in student writing</h3>
+          <p class="detail">University of North Florida · Research with Indika Kahanda</p>
+          <p>A student can get the answer right while their explanation reveals a misconception. I designed prompts to look for those misconceptions in short answers and compared the models’ assessments with instructor annotations.</p>
           <p class="detail project-links"><a href="#ramp">Publication</a> · <a href="https://github.com/ellaluedeke/llm-student-misconceptions">Evaluation code and synthetic examples</a></p>
         </article>
 
         <article>
-          <h3>InfraLearn · A simulator for teaching energy security</h3>
-          <p class="detail">UNC Charlotte · NSF Research Experience for Undergraduates · 2025</p>
-          <p>I built a Python and Flask simulator modeled on the interface of a solar monitoring gateway. The simulator gave students a way to explore how a networked energy device behaves in a controlled setting. We designed the activities for learners without a computer science background and published the work in the CISSE journal.</p>
-          <p class="detail project-links"><a href="#infralearn">Publication</a> · <a href="https://github.com/ellaluedeke/enphase_gateway_simulation">Simulator code</a></p>
+          <h3>InfraLearn · Cybersecurity education for energy systems</h3>
+          <p class="detail">UNC Charlotte · NSF Research Experience for Undergraduates, 2025</p>
+          <p>I built a Python and Flask simulator modeled on the interface of a solar monitoring gateway. It let students without a computer science background explore how a networked energy device behaves without needing access to physical equipment.</p>
+          <p class="detail project-links"><a href="#infralearn">Publication</a></p>
         </article>
       </section>
 
       <section id="publications" aria-labelledby="publications-heading">
-        <h2 id="publications-heading">Selected publications</h2>
+        <h2 id="publications-heading">Publications</h2>
         <ul class="publications">
           <li id="ramp">
             <a href="https://scholars.unf.edu/en/publications/ramp-exploring-the-feasibility-of-detecting-physics-student-misco/">RAMP: Exploring the Feasibility of Detecting Physics Student Misconceptions in Writing Assignments Using Large Language Models</a>
-            <p class="detail"><strong>Ella Luedeke</strong>, Natalie Spiro, Indika Kahanda, Brian Lane, J. Caleb Spiers, Terrie Galanti, and Upulee Kanewala · FLAIRS, 2026</p>
+            <p class="detail"><strong>Ella Luedeke</strong>, Natalie Spiro, Indika Kahanda, Brian Lane, J. Caleb Spiers, Terrie Galanti, and Upulee Kanewala<span class="venue"><cite>FLAIRS</cite>, 2026</span></p>
           </li>
           <li id="infralearn">
             <a href="https://doi.org/10.53735/cisse.v13i1.243">Teaching Critical Infrastructure Security Through Interactive Experiences: Modeling Cyberattacks in Gamified Learning</a>
-            <p class="detail"><strong>Ella Luedeke</strong>, Meera Sridhar, and Harini Ramaprasad · Journal of The Colloquium for Information Systems Security Education, 2026</p>
+            <p class="detail"><strong>Ella Luedeke</strong>, Meera Sridhar, and Harini Ramaprasad<span class="venue"><cite>Journal of The Colloquium for Information Systems Security Education</cite>, 2026</span></p>
           </li>
           <li>
             <a href="https://doi.org/10.5281/zenodo.22818568">We Create Quality: Towards a Human-Centric Theory of Research Software Quality in the Age of AI</a>
-            <p class="detail">Reed Milewicz, Connor Brynteson, <strong>Ella Luedeke</strong>, and Italo de Oliveira Santos · US Research Software Engineering Conference, 2026</p>
+            <p class="detail">Reed Milewicz, Connor Brynteson, <strong>Ella Luedeke</strong>, and Italo de Oliveira Santos<span class="venue"><cite>US Research Software Engineering Conference</cite>, 2026</span></p>
           </li>
         </ul>
       </section>
 
       <section id="talks" aria-labelledby="talks-heading">
-        <h2 id="talks-heading">Selected presentations</h2>
-        <p>I presented the physics misconception study at the 2026 National Conference on Undergraduate Research and the InfraLearn project at the 2025 CISSE conference. The physics project also received the Faculty &amp; Staff Choice Award at UNF’s School of Computing Symposium in 2025.</p>
+        <h2 id="talks-heading">Selected Talks</h2>
+        <ul class="talks">
+          <li><time class="detail" datetime="2026">2026</time><div>Detecting physics misconceptions in student writing<br><span class="detail">National Conference on Undergraduate Research</span></div></li>
+          <li><time class="detail" datetime="2025">2025</time><div>Teaching infrastructure security through interactive experiences<br><span class="detail">CISSE Conference, Seattle University</span></div></li>
+          <li><time class="detail" datetime="2025">2025</time><div>Detecting physics misconceptions in student writing<br><span class="detail">UNF School of Computing Symposium · Faculty &amp; Staff Choice Award</span></div></li>
+        </ul>
       </section>
 
       <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">A bit about me</h2>
-        <p>I graduated from UNF in 2026 with a B.S. in computer science and a minor in leadership. I helped teach the undergraduate compilers course and ran workshops and industry panels as president of UNF’s Women in Cybersecurity chapter.</p>
-        <p>Outside research, I like hiking and photography. I’ve hiked the La Luz Trail in New Mexico and summited Mount Elbert in Colorado.</p>
+        <h2 id="about-heading">Teaching &amp; Service</h2>
+        <p>At UNF, I helped teach the undergraduate compilers course and organized workshops and industry panels as president of the Women in Cybersecurity chapter. I graduated in 2026 with a B.S. in computer science and a minor in leadership. Currently at Cambridge, I am one of the Churchill MCR's Bar Secretaries and a member of the Churchill College Boat Club.</p>
+        <p>Outside the lab, I like hiking and traveling. I’ve summited 4 state peaks so far: Mount Elbert in Colorado, Guadalupe Peak in Texas, Wheeler Peak in New Mexico, and Mount Rogers in Virginia.</p>
       </section>
-      <footer>Updated November 2026</footer>
     </main>
+
+    <footer class="detail">Updated <time datetime="2026-11">November 2026</time></footer>
   </div>
 </body>
 </html>
